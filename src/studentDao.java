@@ -1,10 +1,11 @@
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class studentDao {
 
-	public static boolean insertStudentToDB(student st) throws ClassNotFoundException {
+	public static boolean insertStudentToDB(student st) throws ClassNotFoundException, IOException {
 		
 		//jdbc code...
 		boolean f=false;

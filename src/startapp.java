@@ -7,7 +7,7 @@ public class startapp {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		System.out.println("Welcome to Student Management App");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+		
 		while (true) {
 			System.out.println("Press 1 to add student");
 			System.out.println("Press 2 to Delete student");
