@@ -51,6 +51,7 @@ public class startapp {
 
 			} else if (c == 3) {
 				// display
+				studentDao.showAllStudent();
 
 			} else if (c == 4) {
 				// exist
