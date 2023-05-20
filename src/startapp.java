@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class startapp {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		System.out.println("Welcome to Student Management App");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -19,6 +19,21 @@ public class startapp {
 				// add students
 				System.out.println("Enter your name..");
 				String name = br.readLine();
+				
+				System.out.println("Enter your phone number..");
+				String phone = br.readLine();
+				
+				// create student object to store student.
+				student st = new student(name,phone);
+				boolean answer = studentDao.insertStudentToDB(st);
+				// check name and phone number
+				System.out.println(st);
+				
+				if(answer) {
+					System.out.println("Added Successfully to Database");
+				}else {
+					System.out.println("Sometjing went wrong....");
+				}
 				
 
 			} else if (c == 2) {
